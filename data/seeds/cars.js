@@ -5,7 +5,6 @@ exports.seed = function(knex) {
     .then(function() {
       // Inserts seed entries
       return knex("cars").insert([
-        // <<<<<< change table name here
         {
           vin: "1FVNY5Y90HP312888",
           make: "Audi",
