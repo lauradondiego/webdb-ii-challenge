@@ -3,13 +3,16 @@ exports.up = function(knex) {
     // id column, primary key, autoincrement, integer
     tbl.increments();
     // VIN column
-    tbl.string("vin");
+    tbl
+      .string("vin")
+      .unique()
+      .notNullable();
     // MAKE column
-    tbl.string("make");
+    tbl.string("make").notNullable();
     // MODEL column
-    tbl.string("model");
+    tbl.string("model").notNullable();
     // MILEAGE column
-    tbl.integer("mileage");
+    tbl.integer("mileage").notNullable();
     // TRANSMISSION TYPE column
     tbl.string("type");
     // STATUS column
